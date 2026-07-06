@@ -1,0 +1,204 @@
+{
+  "_generated": "GENERATED FILE. DO NOT EDIT MANUALLY. Run npm run ai:sync.",
+  "schema_version": 1,
+  "index_kind": "navigation",
+  "limitations": "This is a navigation index, not complete architecture or semantic code intelligence.",
+  "project": {
+    "name": "kcevagent",
+    "description": "Framework-neutral, AI-operable project with generated context and enforceable quality gates.",
+    "source_roots": [
+      "src",
+      "static",
+      "tools"
+    ],
+    "exclude": [
+      "node_modules",
+      ".git",
+      ".svelte-kit",
+      ".vercel",
+      "dist",
+      ".ai/generated"
+    ]
+  },
+  "package": {
+    "name": "kcevagent",
+    "version": "0.0.1",
+    "scripts": {
+      "dev": "vite dev",
+      "build": "npm run ai:check && vite build && npm run prepack",
+      "preview": "vite preview",
+      "prepare": "svelte-kit sync || echo ''",
+      "prepack": "svelte-kit sync && svelte-package && publint",
+      "ai:sync": "node tools/ai-system/cli.mjs sync",
+      "ai:check": "node tools/ai-system/cli.mjs check",
+      "ai:generate": "npm run ai:sync",
+      "ai:validate": "npm run ai:check && npm run ai:test",
+      "ai:assess": "node tools/ai-system/cli.mjs assess",
+      "ai:test": "node --test tools/ai-system/*.test.mjs",
+      "context:sync": "npm run ai:sync",
+      "context:check": "npm run ai:check",
+      "mcp:project": "node tools/project-mcp.mjs"
+    },
+    "dependencies": {
+      "@modelcontextprotocol/sdk": "^1.29.0",
+      "@sveltejs/adapter-vercel": "^6.3.3",
+      "@sveltejs/kit": "^2.63.0",
+      "@sveltejs/package": "^2.5.8",
+      "@sveltejs/vite-plugin-svelte": "^7.1.2",
+      "@tailwindcss/forms": "^0.5.11",
+      "@tailwindcss/typography": "^0.5.19",
+      "@tailwindcss/vite": "^4.3.0",
+      "publint": "^0.3.21",
+      "svelte": "^5.56.1",
+      "tailwindcss": "^4.3.0",
+      "typescript": "^6.0.3",
+      "vite": "^8.0.16",
+      "yaml": "^2.9.0",
+      "zod": "^4.4.3"
+    }
+  },
+  "source_digest": "d8eb3a58019ed9cd",
+  "files": [
+    {
+      "path": "src/app.html",
+      "bytes": 391,
+      "digest": "b5b8faa97dfacfcc",
+      "extension": ".html",
+      "imports": [],
+      "exports": [],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "lightweight-patterns"
+    },
+    {
+      "path": "src/lib/index.js",
+      "bytes": 61,
+      "digest": "1052487d0310f368",
+      "extension": ".js",
+      "imports": [],
+      "exports": [
+        "public"
+      ],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "typescript-preprocess"
+    },
+    {
+      "path": "src/routes/+layout.svelte",
+      "bytes": 98,
+      "digest": "9d10701f48e66d62",
+      "extension": ".svelte",
+      "imports": [
+        "./layout.css"
+      ],
+      "exports": [],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "typescript-preprocess"
+    },
+    {
+      "path": "src/routes/+page.svelte",
+      "bytes": 239,
+      "digest": "29a19e0e5882d80a",
+      "extension": ".svelte",
+      "imports": [],
+      "exports": [],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "typescript-preprocess"
+    },
+    {
+      "path": "src/routes/layout.css",
+      "bytes": 88,
+      "digest": "c63d887be62681fa",
+      "extension": ".css",
+      "imports": [],
+      "exports": [],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "lightweight-patterns"
+    },
+    {
+      "path": "static/favicon.svg",
+      "bytes": 1569,
+      "digest": "c98c37cbc0242b2c",
+      "extension": ".svg",
+      "imports": [],
+      "exports": [],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "lightweight-patterns"
+    },
+    {
+      "path": "tools/ai-system/cli.mjs",
+      "bytes": 1202,
+      "digest": "913ebe1ac0686646",
+      "extension": ".mjs",
+      "imports": [
+        "./core.mjs"
+      ],
+      "exports": [],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "typescript-preprocess"
+    },
+    {
+      "path": "tools/ai-system/core.mjs",
+      "bytes": 12804,
+      "digest": "355b558669d1bc22",
+      "extension": ".mjs",
+      "imports": [
+        "node:crypto",
+        "node:fs/promises",
+        "node:path",
+        "node:url",
+        "typescript",
+        "yaml",
+        "zod"
+      ],
+      "exports": [
+        "ROOT",
+        "aiSystemPlugin",
+        "assessComplexity",
+        "async",
+        "selectPolicies"
+      ],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "typescript-preprocess"
+    },
+    {
+      "path": "tools/ai-system/core.test.mjs",
+      "bytes": 2103,
+      "digest": "4cc82f0b177f90f3",
+      "extension": ".mjs",
+      "imports": [
+        "./core.mjs",
+        "node:assert/strict",
+        "node:test"
+      ],
+      "exports": [],
+      "is_test": true,
+      "is_generated": false,
+      "analysis": "typescript-preprocess"
+    },
+    {
+      "path": "tools/project-mcp.mjs",
+      "bytes": 5579,
+      "digest": "c164c696a2e2e420",
+      "extension": ".mjs",
+      "imports": [
+        "./ai-system/core.mjs",
+        "@modelcontextprotocol/sdk/server/mcp.js",
+        "@modelcontextprotocol/sdk/server/stdio.js",
+        "node:fs/promises",
+        "node:path",
+        "zod"
+      ],
+      "exports": [],
+      "is_test": false,
+      "is_generated": false,
+      "analysis": "typescript-preprocess"
+    }
+  ]
+}
