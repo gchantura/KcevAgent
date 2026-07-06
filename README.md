@@ -14,6 +14,8 @@ npm run mcp:project    # start the project MCP over stdio
 
 Start with `.ai/manifest.yaml`. `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, Copilot instructions, `PROJECT_MAP.md`, skill adapters, and `.mcp.json` are derived artifacts. See `docs/MCP_CLIENT_SETUP.md` for host integration.
 
+მომხმარებლის ყოველდღიური ბრძანებები და სამუშაო პროცესი აღწერილია [`docs/USER_WORKFLOW.md`](docs/USER_WORKFLOW.md)-ში.
+
 Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
 
 Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
